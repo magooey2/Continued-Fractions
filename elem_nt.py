@@ -149,10 +149,10 @@ def sigma_k(n, k):
     """
 
     n = abs(n)
-    sum = n ** k
+    sum = n**k
     for d in range(1, 1 + (n // 2)):
         if n % d == 0:
-            sum = sum + d ** k
+            sum = sum + d**k
 
     return sum
 
@@ -207,7 +207,7 @@ def phi2(n, p=2):
         n, expo = n // nextp, expo + 1
 
         # formula for phi(p**e)
-    factor = nextp ** expo - nextp ** (expo - 1)
+    factor = nextp**expo - nextp ** (expo - 1)
     return factor * phi2(n, nextp)
 
 

@@ -27,7 +27,7 @@ def cf_finite(x, bnd):
     while cnt < bnd:
         # take floor, then reciprocal
         # r**0.5 won't work for large r
-        cf_top_approx = cf.a + cf.b * cf.r ** 0.5
+        cf_top_approx = cf.a + cf.b * cf.r**0.5
         # __floordiv__ is `//'
         cf_floor = cf_top_approx // cf.d
         cf_list.append(int(cf_floor))
@@ -83,7 +83,7 @@ def cntd_frac(x):
         while 1:
             # take floor, then reciprocal
             # r**0.5 won't work for large r
-            cf_top_approx = cf.a + cf.b * cf.r ** 0.5
+            cf_top_approx = cf.a + cf.b * cf.r**0.5
             # __floordiv__ is `//'
             cf_floor = cf_top_approx // cf.d
             cf_floor = int(cf_floor)

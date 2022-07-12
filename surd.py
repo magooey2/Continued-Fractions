@@ -224,13 +224,13 @@ def isqrt(a):
     is very quick - 4 or 5 iterations for a 50 digit number.
     """
 
-    if a < 1 + 10 ** 8:
-        return int(a ** 0.5)
+    if a < 1 + 10**8:
+        return int(a**0.5)
     else:
         b = len(str(a))
         c = b // 8
         d = a // 10 ** (8 * c - 4)
-        approx = int(d ** 0.5) * 10 ** (4 * c - 2)
+        approx = int(d**0.5) * 10 ** (4 * c - 2)
         # 						----- Debugging -----
         # 	print b, c, d
         # 	print approx
@@ -274,11 +274,11 @@ def fund_unit(m):
         while 1:
             test_4_square = m * b * b - 1
             test_a = isqrt(test_4_square)
-            if test_4_square - test_a ** 2 == 0:
+            if test_4_square - test_a**2 == 0:
                 return Surd(test_a, b, 1, m)
             test_4_square = m * b * b + 1
             test_a = isqrt(test_4_square)
-            if test_4_square - test_a ** 2 == 0:
+            if test_4_square - test_a**2 == 0:
                 return Surd(test_a, b, 1, m)
             b += 1
             # Case of m = 1 mod 4
@@ -287,11 +287,11 @@ def fund_unit(m):
         while 1:
             test_4_square = m * b * b - 4
             test_a = isqrt(test_4_square)
-            if test_4_square - test_a ** 2 == 0:
+            if test_4_square - test_a**2 == 0:
                 return Surd(test_a, b, 2, m)
             test_4_square = m * b * b + 4
             test_a = isqrt(test_4_square)
-            if test_4_square - test_a ** 2 == 0:
+            if test_4_square - test_a**2 == 0:
                 return Surd(test_a, b, 2, m)
             b += 1
 
