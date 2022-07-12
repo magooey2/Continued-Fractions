@@ -235,7 +235,7 @@ def isqrt(a):
         # 	print b, c, d
         # 	print approx
         # 						------ end debugging -----
-        while 1:
+        while True:
             b = a - approx * approx
             approx2 = approx + (b // (2 * approx))
             # 						----- Debugging -----
@@ -271,7 +271,7 @@ def fund_unit(m):
         # a + b sqrt(m) is the fund. unit.
     if m % 4 == 2 or m % 4 == 3:
         b = 1
-        while 1:
+        while True:
             test_4_square = m * b * b - 1
             test_a = isqrt(test_4_square)
             if test_4_square - test_a**2 == 0:
@@ -284,7 +284,7 @@ def fund_unit(m):
             # Case of m = 1 mod 4
     else:
         b = 1
-        while 1:
+        while True:
             test_4_square = m * b * b - 4
             test_a = isqrt(test_4_square)
             if test_4_square - test_a**2 == 0:

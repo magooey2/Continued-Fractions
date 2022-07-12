@@ -61,7 +61,7 @@ def cntd_frac(x):
 
     # case of rational number
     if x.b == 0:
-        while 1:
+        while True:
             # take floor, then reciprocal
             # __floordiv__ is `//'
             cf_floor = cf.a // cf.d
@@ -80,7 +80,7 @@ def cntd_frac(x):
         cf_partial_list = []
         cf_partial_list.append(str(cf))
 
-        while 1:
+        while True:
             # take floor, then reciprocal
             # r**0.5 won't work for large r
             cf_top_approx = cf.a + cf.b * cf.r**0.5
