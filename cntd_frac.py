@@ -8,7 +8,7 @@
 
 
 from elem_nt import euclid_alg, square_part
-from surd import *
+from surd import Surd
 import linfractrans
 
 
