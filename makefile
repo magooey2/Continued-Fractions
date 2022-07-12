@@ -1,7 +1,7 @@
 #----------------------------------------------------
 # GCC LINUX make file for cnd_frac3 directory
 #----------------------------------------------------
-
+.Phony: findpts zoo gzip bzip clean venv install_deps sanitize
 
 #----- make NDEBUG=1 for nodebugging ------#
 
@@ -54,5 +54,12 @@ clean :
 	for f in *.dvi; do rm -f $$f; done
 	for f in *.log; do rm -f $$f; done
 
-     
- 
+
+venv :
+	python3 -m venv .venv
+
+install_deps : 
+	.venv/bin/python -m pip install -r requirements-dev.txt
+
+sanitize : install_deps .venv
+	.venv/bin/python -m black *.py
